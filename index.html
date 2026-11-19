@@ -1,0 +1,1548 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Botha Family Songs</title>
+<meta name="description" content="Personalised songs made to order for the people you love, by the Botha family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        /* ==============================
+   THE BOTHA FAMILY SONGS
+   Premium modern styling
+============================== */
+
+:root {
+  --bg: #fbf7f6;
+  --surface: #ffffff;
+  --fg: #29151f;
+  --muted: #806c77;
+  --line: #eadde2;
+
+  --accent: #a82654;
+  --accent-fg: #ffffff;
+  --accent-soft: #f7e6ec;
+
+  --price: #9b5b25;
+  --warn-bg: #fff3d8;
+  --warn-fg: #72500c;
+
+  --wine: #280c1c;
+  --wine2: #641b39;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+
+  --shadow-sm: 0 3px 12px rgba(45, 12, 28, .04);
+  --shadow-md: 0 10px 30px rgba(45, 12, 28, .07);
+  --shadow-lg: 0 20px 60px rgba(45, 12, 28, .13);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #160e13;
+    --surface: #221720;
+    --fg: #f7edf1;
+    --muted: #bba5b0;
+    --line: #392a35;
+
+    --accent: #e66d98;
+    --accent-fg: #270916;
+    --accent-soft: #38202c;
+
+    --price: #efbb76;
+    --warn-bg: #392c13;
+    --warn-fg: #f5dda0;
+
+    --wine: #150710;
+    --wine2: #641b39;
+
+    --shadow-sm: 0 3px 12px rgba(0, 0, 0, .12);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, .2);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, .3);
+
+    color-scheme: dark;
+  }
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-bottom: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  text-wrap: balance;
+  letter-spacing: -.035em;
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* LAYOUT */
+
+.wrap {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: max(22px, env(safe-area-inset-left));
+  padding-right: max(22px, env(safe-area-inset-right));
+}
+
+section {
+  padding-block: 76px;
+}
+
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  min-height: 50px;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease,
+    opacity .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(.98);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+  box-shadow: 0 5px 18px rgba(168, 38, 84, .2);
+}
+
+.btn.primary:hover {
+  box-shadow: 0 8px 24px rgba(168, 38, 84, .3);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: var(--accent-soft);
+}
+
+.btn[aria-disabled="true"] {
+  opacity: .4;
+  pointer-events: none;
+}
+
+/* HEADER */
+
+header.top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.top .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 16px 12px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  text-decoration: none;
+  letter-spacing: -.04em;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.top .btn {
+  padding: 9px 20px;
+  min-height: 42px;
+  font-size: .9rem;
+}
+
+nav.links {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 13px;
+  scrollbar-width: none;
+}
+
+nav.links::-webkit-scrollbar {
+  display: none;
+}
+
+nav.links a {
+  flex: none;
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--fg);
+  transition: .2s ease;
+}
+
+nav.links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* OWNER NOTICE */
+
+.owner {
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  margin-top: 18px;
+}
+
+.owner[hidden] {
+  display: none;
+}
+
+/* HERO */
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(213, 75, 125, .3), transparent 35%),
+    linear-gradient(135deg, var(--wine), var(--wine2) 65%, #a52b57);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner.photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 5, 17, .85),
+    rgba(28, 5, 17, .45)
+  );
+}
+
+.banner .waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 130px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 0 8px;
+  opacity: .18;
+}
+
+.banner .waves i {
+  flex: 1;
+  background: #fff;
+  border-radius: 4px 4px 0 0;
+  min-width: 2px;
+}
+
+.banner .wrap {
+  position: relative;
+  padding-block: 75px 150px;
+  display: grid;
+  gap: 38px;
+  align-items: center;
+}
+
+.btext {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.bphoto {
+  margin: 0;
+}
+
+.bphoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, .2);
+}
+
+.banner.has-photo .wrap {
+  padding-block: 50px 0;
+  align-items: end;
+}
+
+.banner.has-photo .waves {
+  opacity: .08;
+}
+
+.banner .eyebrow {
+  color: #f6b6ce;
+  margin: 0;
+}
+
+.banner h1 {
+  font-size: clamp(2.8rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.055em;
+  max-width: 12ch;
+}
+
+.banner h1 em {
+  font-weight: 500;
+  color: #f4a8c5;
+}
+
+.banner p.lede {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 42ch;
+  color: #f5dce6;
+  line-height: 1.75;
+}
+
+.banner .btn {
+  background: #fff;
+  color: #491127;
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+/* DESKTOP HERO */
+
+@media (min-width: 760px) {
+  .banner .wrap {
+    padding-block: 110px 180px;
+  }
+
+  .banner.has-photo .wrap {
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    padding-block: 80px 0;
+  }
+
+  .banner.has-photo .btext {
+    padding-bottom: 80px;
+  }
+}
+
+/* HOW IT WORKS */
+
+.steps {
+  display: grid;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  counter-reset: step;
+}
+
+@media (min-width: 720px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.steps li {
+  counter-increment: step;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.steps li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.steps li::before {
+  content: "0" counter(step);
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.steps p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* FAMILY SECTION */
+
+.family {
+  background: var(--accent-soft);
+}
+
+.family .grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+@media (min-width: 720px) {
+  .family .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.family .card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.family .card h3 {
+  margin-bottom: 8px;
+}
+
+.family p.lead {
+  max-width: 65ch;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* OCCASIONS */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.chip {
+  font: inherit;
+  font-weight: 500;
+  padding: 12px 20px;
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--fg);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(168, 38, 84, .2);
+}
+
+/* ORDER FORM */
+
+.formwrap {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+fieldset.card {
+  margin: 0;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 4vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+fieldset.card legend {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  padding: 0 8px;
+  margin-left: -8px;
+  letter-spacing: -.03em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+label {
+  font-weight: 600;
+  font-size: .92rem;
+}
+
+.hint {
+  display: block;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+/* INPUTS */
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+  font: inherit;
+  font-size: 16px;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  width: 100%;
+  min-width: 0;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 560px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* PACKAGES */
+
+.pkgs {
+  display: grid;
+  gap: 14px;
+}
+
+.pkg {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  background: var(--bg);
+  transition: border-color .2s, box-shadow .2s, background .2s, transform .2s;
+}
+
+.pkg:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.pkg:has(input:checked) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+  background: var(--accent-soft);
+}
+
+.pkg input {
+  margin-top: 5px;
+  accent-color: var(--accent);
+  width: 19px;
+  height: 19px;
+}
+
+.pkg b {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.pkg .d {
+  display: block;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.pkg .price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--price);
+  white-space: nowrap;
+}
+
+/* TERMS */
+
+details {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: var(--bg);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+summary:hover {
+  color: var(--accent);
+}
+
+details ol,
+details p {
+  margin: 14px 0 0;
+  font-size: .93rem;
+}
+
+details ol {
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.check input {
+  margin-top: 5px;
+  accent-color: var(--accent);
+  width: 19px;
+  height: 19px;
+  flex: none;
+}
+
+/* PAYMENT */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actions .btn {
+  width: 100%;
+}
+
+.sum {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sum b {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.err {
+  color: var(--warn-fg);
+  background: var(--warn-bg);
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: .9rem;
+}
+
+.err[hidden] {
+  display: none;
+}
+
+.small {
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+/* FAQ */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.faq details {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq details p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* STICKY ORDER BUTTON */
+
+.stick {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  padding:
+    12px
+    max(18px, env(safe-area-inset-right, 0px))
+    calc(12px + env(safe-area-inset-bottom, 0px))
+    max(18px, env(safe-area-inset-left, 0px));
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--line);
+  transition: transform .25s ease;
+}
+
+.stick.off {
+  transform: translateY(110%);
+}
+
+.stick .btn {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(168, 38, 84, .2);
+}
+
+@media (min-width: 900px) {
+  .stick {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* SMALL SCREEN ADJUSTMENTS */
+
+@media (max-width: 480px) {
+  section {
+    padding-block: 54px;
+  }
+
+  .wrap {
+    padding-inline: 18px;
+  }
+
+  .banner .wrap {
+    padding-block: 55px 130px;
+  }
+
+  .banner.has-photo .wrap {
+    padding-block: 45px 0;
+  }
+
+  .banner h1 {
+    font-size: clamp(2.65rem, 13vw, 4rem);
+  }
+
+  fieldset.card {
+    border-radius: 18px;
+  }
+
+  .pkg {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .pkg .price {
+    font-size: 1.1rem;
+  }
+}
+    </style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top">The Botha <span>Family</span> Songs</a>
+      <a class="btn primary" href="#order">Order</a>
+    </div>
+    <nav class="links" aria-label="Page sections">
+      <a href="#how">How it works</a>
+      <a href="#family">The Bothas</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#order">Order</a>
+      <a href="#faq">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap"><div class="owner" id="ownerNote" hidden></div></div>
+
+  <!-- BANNER: set CONFIG.bannerImage to your own family photo or artwork to replace the gradient -->
+  <div class="banner" id="banner">
+    <div class="waves" id="waves" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="btext">
+        <p class="eyebrow">Personalised songs · made to order</p>
+        <h1>A song with <em>their name</em> in it.</h1>
+        <p class="lede" id="heroLede">Tell the Bothas about someone you love. We turn your memories into a song made just for them.</p>
+        <a class="btn" href="#order">Order a song</a>
+      </div>
+      <figure class="bphoto" id="bphoto" hidden><img id="bimg" alt="The Botha family smiling together in their garden" width="1400" height="1120"></figure>
+    </div>
+  </div>
+
+  <section id="how"><div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps, no stress</h2>
+    <ol class="steps">
+      <li><h3>Tell us their story</h3><p>Their name, what they love, the memories and inside jokes you want in the song.</p></li>
+      <li><h3 id="step2h">We make your song</h3><p id="step2p">We turn your story into lyrics and music in the style you pick, in your language.</p></li>
+      <li><h3>You give it</h3><p>Your finished song arrives by email within <span id="days">3</span> days, with one free change if something is off.</p></li>
+    </ol>
+  </div></section>
+
+  <section class="family" id="family"><div class="wrap">
+    <p class="eyebrow">Who we are</p>
+    <h2>The Botha family</h2>
+    <p class="lead" id="familyText">We are a family business. Every order comes to us, we read your story ourselves, and we make sure each song is right before it reaches you.</p>
+    <div class="grid">
+      <div class="card"><h3>Made for you</h3><p class="small">No two songs are the same. Yours is built around your names, your stories and your language.</p></div>
+      <div class="card"><h3>Checked by us</h3><p class="small">We read every order and check every song before it is sent. If something is off, we change it once for free.</p></div>
+    </div>
+  </div></section>
+
+  <section id="occasions"><div class="wrap">
+    <p class="eyebrow">Made for moments like these</p>
+    <h2>What is the occasion?</h2>
+    <p class="small" style="margin-top:8px">Tap one to start your order.</p>
+    <div class="chips" id="chips" role="group" aria-label="Pick an occasion"></div>
+  </div></section>
+
+  <section id="order"><div class="wrap formwrap">
+    <div><p class="eyebrow">Your order</p><h2>Tell us about the song</h2></div>
+    <form id="orderForm" novalidate style="display:contents">
+      <fieldset class="card">
+        <legend>Who is it for?</legend>
+        <div class="row">
+          <div class="field"><label for="rname">Their name</label><input id="rname" type="text" placeholder="Thandi"></div>
+          <div class="field"><label for="rel">Who are they to you?</label>
+            <select id="rel"><option>Mom</option><option>Dad</option><option>Wife or husband</option><option>Girlfriend or boyfriend</option><option>Child</option><option>Grandparent</option><option>Sibling</option><option>Friend</option><option>Someone else</option></select></div>
+        </div>
+        <div class="field"><label for="occasion">Occasion</label>
+          <select id="occasion"><option>Birthday</option><option>Wedding</option><option>Anniversary</option><option>Mother's or Father's Day</option><option>Valentine's Day</option><option>Just because</option><option>Memorial or tribute</option><option>Something else</option></select></div>
+        <div class="field"><label for="brief">Their story <span class="hint">What makes them them? Nicknames, memories, things they say, places, jokes. Or paste your own lyrics.</span></label><textarea id="brief"></textarea></div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend>How should it sound?</legend>
+        <div class="row">
+          <div class="field"><label for="genre">Style</label>
+            <select id="genre"><option>Pop</option><option>Amapiano</option><option>Afro-house</option><option>Gospel</option><option>Hip-hop</option><option>R&amp;B</option><option>Acoustic / folk</option><option>Country</option><option>Jazz</option><option>Not sure, you choose</option></select></div>
+          <div class="field"><label for="mood">Mood</label>
+            <select id="mood"><option>Heartfelt and emotional</option><option>Happy and upbeat</option><option>Romantic</option><option>Funny</option><option>Chilled</option><option>Energetic</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="lang">Language</label>
+            <select id="lang"><option>English</option><option>Afrikaans</option><option>isiZulu</option><option>isiXhosa</option><option>Sesotho</option><option>Setswana</option><option>Other (say which in their story)</option></select></div>
+          <div class="field"><label for="vocal">Voice</label>
+            <select id="vocal"><option>Female voice</option><option>Male voice</option><option>Instrumental only</option><option>No preference</option></select></div>
+        </div>
+        <div class="field"><label for="ref">Songs with a similar feel <span class="hint">(optional, for style only)</span></label><input id="ref" type="text"></div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend>Your details</legend>
+        <div class="row">
+          <div class="field"><label for="name">Your name</label><input id="name" type="text" autocomplete="name"></div>
+          <div class="field"><label for="phone">WhatsApp number</label><input id="phone" type="tel" autocomplete="tel" placeholder="082 123 4567"></div>
+        </div>
+        <div class="field"><label for="email">Email <span class="hint">(your finished song is sent here)</span></label><input id="email" type="email" autocomplete="email"></div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend>Choose your licence</legend>
+        <div class="pkgs" id="pkgs" role="radiogroup" aria-label="Licence package"></div>
+        <details><summary>Rights and copyright terms</summary><ol id="terms"></ol></details>
+        <label class="check"><input type="checkbox" id="agree"><span>I have read and accept the rights and copyright terms above.</span></label>
+      </fieldset>
+
+      <fieldset class="card" id="paybox">
+        <legend>Pay and send your order</legend>
+        <div class="sum"><span id="sumPkg">No licence chosen</span><b id="sumPrice">R0</b></div>
+        <p class="small" id="refLine"></p>
+        <div class="err" id="err" hidden></div>
+        <div class="actions">
+          <a class="btn primary" id="payBtn" target="_blank" rel="noopener" href="#" aria-disabled="true">Pay securely with Yoco</a>
+          <a class="btn secondary" id="waBtn" target="_blank" rel="noopener" href="#" aria-disabled="true">Send order details on WhatsApp</a>
+          <button type="button" class="btn secondary" id="copyBtn">Copy order details</button>
+        </div>
+        <p class="small">Please do both steps. Yoco takes your payment on their own secure page, and your order details reach us on WhatsApp with your order number so we can match them. We start your song once payment shows.</p>
+      </fieldset>
+    </form>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Good to know</h2>
+    <div class="faq">
+      <details><summary>How is my song made?</summary><p>Each song is made to order from your story. We create it using AI music tools and guide and check the result ourselves before it reaches you. Our terms explain what rights you receive.</p></details>
+      <details><summary>How long does it take?</summary><p>We aim to deliver within <span class="days2">3</span> days of your payment showing.</p></details>
+      <details><summary>What if I want something changed?</summary><p>You get one free change to the lyrics or style. Just reply on WhatsApp.</p></details>
+      <details><summary>Can I use it on social media or in my business?</summary><p>Keepsake is for personal use. If you want to use a song in your business, ads or monetised content, choose Keepsake + Business or Exclusive.</p></details>
+      <details><summary>Can I get a refund?</summary><p>Each song is made specially for you, so we do not refund finished work. If we cannot deliver, you get a full refund.</p></details>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><b>The Botha Family Songs</b></p>
+  <p>Songs are created with AI music tools and delivered as digital files.</p>
+</div></footer>
+
+<div class="stick" id="stick"><a class="btn primary" href="#order">Order a song</a></div>
+
+<script>
+/* =========================================
+   THE BOTHA FAMILY SONGS
+   CONFIGURATION
+========================================= */
+
+const CONFIG = {
+
+  // # CHANGE: Add your WhatsApp number.
+  // Format: 27821234567 (no +, spaces or brackets)
+  whatsapp: "",
+
+  deliveryDays: 3,
+
+  // # CHANGE: Your family photo filename/path.
+  bannerImage: "Smiling Family Portrait in the Garden.png",
+
+  // # CHANGE: Set to true ONLY if your family records the vocals.
+  familySings: false,
+
+  packages: [
+    {
+      id: "personal",
+      name: "Keepsake",
+      price: 350,
+
+      // # CHANGE: Add the Yoco payment link for R350.
+      yoco: "",
+
+      desc: "A personal licence. Play it, gift it, share it with family and friends. Not for earning money."
+    },
+    {
+      id: "commercial",
+      name: "Keepsake + Business",
+      price: 850,
+
+      // # CHANGE: Add the Yoco payment link for R850.
+      yoco: "",
+
+      desc: "Also use it in your business, ads, videos, podcasts and monetised social media."
+    },
+    {
+      id: "exclusive",
+      name: "Exclusive",
+      price: 2500,
+
+      // # CHANGE: Add the Yoco payment link for R2500.
+      yoco: "",
+
+      desc: "Everything above, and we never sell, license or reuse your song for anyone else."
+    }
+  ]
+};
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+const TERMS = [
+  "<b>How the song is made.</b> Your song is created with AI music tools from the details you give us, then checked by us. You agree to say it is AI-generated wherever the law, a platform or a client requires it.",
+
+  "<b>What you get.</b> Once paid, you receive a licence for the song and the rights we hold in it, as set out in the package you chose. Keepsake covers private, non-commercial use. Keepsake + Business adds business use and monetised content. Exclusive adds that we will not sell, license or reuse the song for anyone else.",
+
+  "<b>No guarantee of copyright.</b> The law on copyright in AI-generated music is still unsettled and differs between countries. We give you a licence to whatever rights exist, but we cannot promise the song can be registered as copyright or protected against copying.",
+
+  "<b>Your input stays yours.</b> Names, lyrics and stories you supply remain yours. You promise you have the right to use them and that they do not copy someone else's work or defame anyone.",
+
+  "<b>No imitation.</b> We do not copy existing songs, and we do not imitate the voice or name of any real artist. Style references are for general feel only.",
+
+  "<b>Resale.</b> You may not resell the song as a stock track or register it with a collecting society as a song you wrote entirely by hand. Business and Exclusive licences may upload it to streaming and video platforms, subject to each platform's own rules.",
+
+  "<b>Changes and delivery.</b> We aim to deliver within the stated number of days. You get one free change to the lyrics or style. Because each song is made to order, we do not refund finished work, but if we cannot deliver we refund you in full.",
+
+  "<b>Your information.</b> We use your details only to make and deliver your song and to deal with payment. Nothing in these terms limits your rights under South African law."
+];
+
+
+/* =========================================
+   OCCASIONS
+========================================= */
+
+const OCCASIONS = [
+  ["Birthday", "Birthday"],
+  ["Wedding", "Wedding"],
+  ["Anniversary", "Anniversary"],
+  ["Mother's or Father's Day", "Mother's or Father's Day"],
+  ["Valentine's", "Valentine's Day"],
+  ["Just because", "Just because"],
+  ["A tribute", "Memorial or tribute"]
+];
+
+
+/* =========================================
+   HELPERS
+========================================= */
+
+const $ = id => document.getElementById(id);
+
+const ORDER_REF =
+  "SONG-" + Math.random().toString(36).slice(2, 7).toUpperCase();
+
+const money = amount =>
+  "R" + Number(amount).toLocaleString("en-ZA");
+
+function chosen() {
+  const selected = document.querySelector('input[name="pkg"]:checked');
+
+  if (!selected) return null;
+
+  return CONFIG.packages.find(pkg => pkg.id === selected.value) || null;
+}
+
+function setButton(button, url, enabled) {
+  button.setAttribute("aria-disabled", enabled ? "false" : "true");
+  button.href = enabled ? url : "#";
+}
+
+
+/* =========================================
+   ORDER SUMMARY
+========================================= */
+
+function summary() {
+  const pkg = chosen();
+
+  return [
+    "NEW SONG ORDER",
+    "Order number: " + ORDER_REF,
+    "",
+    "Customer name: " + $("name").value.trim(),
+    "WhatsApp: " + $("phone").value.trim(),
+    "Email: " + $("email").value.trim(),
+    "",
+    "Song for: " + $("rname").value.trim(),
+    "Relationship: " + $("rel").value,
+    "Occasion: " + $("occasion").value,
+    "",
+    "Style: " + $("genre").value,
+    "Mood: " + $("mood").value,
+    "Language: " + $("lang").value,
+    "Voice: " + $("vocal").value,
+    "Similar songs: " + ($("ref").value.trim() || "None"),
+    "",
+    "Licence: " + (pkg ? pkg.name : "Not selected"),
+    "Price: " + (pkg ? money(pkg.price) : "Not selected"),
+    "Terms accepted: " + ($("agree").checked ? "Yes" : "No"),
+    "",
+    "STORY:",
+    $("brief").value.trim()
+  ].join("\n");
+}
+
+
+/* =========================================
+   FORM VALIDATION
+========================================= */
+
+function problems() {
+  const errors = [];
+
+  if (!$("rname").value.trim())
+    errors.push("Who the song is for");
+
+  if ($("brief").value.trim().length < 15)
+    errors.push("Their story (at least 15 characters)");
+
+  if (!$("name").value.trim())
+    errors.push("Your name");
+
+  if (
+    !$ ("phone").value.trim() &&
+    !$ ("email").value.trim()
+  )
+    errors.push("A WhatsApp number or email");
+
+  if (!chosen())
+    errors.push("A licence");
+
+  if (!$("agree").checked)
+    errors.push("Acceptance of the terms");
+
+  return errors;
+}
+
+
+/* =========================================
+   BANNER
+========================================= */
+
+(function initBanner() {
+
+  const waves = $("waves");
+
+  if (waves) {
+    for (let i = 0; i < 60; i++) {
+      const bar = document.createElement("i");
+
+      bar.style.height =
+        (18 + Math.abs(
+          Math.sin(i * .45) * 60 +
+          Math.sin(i * 1.1) * 30
+        )) + "px";
+
+      waves.appendChild(bar);
+    }
+  }
+
+  if (CONFIG.bannerImage) {
+    $("banner").classList.add("has-photo");
+
+    $("bimg").src = CONFIG.bannerImage;
+
+    $("bphoto").hidden = false;
+  }
+
+})();
+
+
+/* =========================================
+   DELIVERY SETTINGS
+========================================= */
+
+$("days").textContent = CONFIG.deliveryDays;
+
+document.querySelectorAll(".days2").forEach(element => {
+  element.textContent = CONFIG.deliveryDays;
+});
+
+
+/* =========================================
+   FAMILY SINGING SETTINGS
+========================================= */
+
+if (CONFIG.familySings) {
+
+  $("heroLede").textContent =
+    "Tell the Bothas about someone you love. We turn your memories into a song, and the family sings it for them.";
+
+  $("step2h").textContent = "The Bothas sing it";
+
+  $("step2p").textContent =
+    "We write your song around your story and the family records the vocals in the style you pick.";
+
+  $("familyText").textContent =
+    "We are a family business. Every order comes to us, we read your story ourselves, and the Botha family sings your song.";
+
+}
+
+
+/* =========================================
+   ORDER NUMBER
+========================================= */
+
+$("refLine").textContent = "Order number: " + ORDER_REF;
+
+
+/* =========================================
+   PACKAGES
+========================================= */
+
+CONFIG.packages.forEach(pkg => {
+
+  const label = document.createElement("label");
+  label.className = "pkg";
+
+  const radio = document.createElement("input");
+  radio.type = "radio";
+  radio.name = "pkg";
+  radio.value = pkg.id;
+
+  const description = document.createElement("span");
+
+  const title = document.createElement("b");
+  title.textContent = pkg.name;
+
+  const desc = document.createElement("span");
+  desc.className = "d";
+  desc.textContent = pkg.desc;
+
+  description.appendChild(title);
+  description.appendChild(desc);
+
+  const price = document.createElement("span");
+  price.className = "price";
+  price.textContent = money(pkg.price);
+
+  label.appendChild(radio);
+  label.appendChild(description);
+  label.appendChild(price);
+
+  $("pkgs").appendChild(label);
+
+});
+
+
+/* =========================================
+   COPYRIGHT TERMS
+========================================= */
+
+TERMS.forEach(term => {
+
+  const li = document.createElement("li");
+
+  li.innerHTML = term;
+
+  $("terms").appendChild(li);
+
+});
+
+
+/* =========================================
+   OCCASION BUTTONS
+========================================= */
+
+OCCASIONS.forEach(([label, value]) => {
+
+  const button = document.createElement("button");
+
+  button.type = "button";
+  button.className = "chip";
+  button.textContent = label;
+
+  button.setAttribute("aria-pressed", "false");
+
+  button.addEventListener("click", () => {
+
+    $("occasion").value = value;
+
+    document.querySelectorAll(".chip").forEach(chip => {
+      chip.setAttribute(
+        "aria-pressed",
+        chip === button ? "true" : "false"
+      );
+    });
+
+    refresh();
+
+    $("order").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+  $("chips").appendChild(button);
+
+});
+
+
+/* =========================================
+   STICKY ORDER BUTTON
+========================================= */
+
+if ("IntersectionObserver" in window) {
+
+  const observer = new IntersectionObserver(entries => {
+
+    const orderVisible = entries.some(entry => entry.isIntersecting);
+
+    $("stick").classList.toggle("off", orderVisible);
+
+  }, {
+    threshold: 0.05
+  });
+
+  observer.observe($("order"));
+
+}
+
+
+/* =========================================
+   UPDATE ORDER SUMMARY
+========================================= */
+
+function refresh() {
+
+  const pkg = chosen();
+  const errors = problems();
+  const errorBox = $("err");
+
+  $("sumPkg").textContent =
+    pkg ? pkg.name : "No licence chosen";
+
+  $("sumPrice").textContent =
+    pkg ? money(pkg.price) : "R0";
+
+  /* Form validation */
+  if (errors.length) {
+
+    errorBox.hidden = false;
+    errorBox.textContent = "Still needed: " + errors.join(", ") + ".";
+
+  } else {
+
+    errorBox.hidden = true;
+
+  }
+
+  const valid = errors.length === 0;
+
+  /* Yoco */
+  const yocoReady = pkg && pkg.yoco.trim() !== "";
+
+  setButton(
+    $("payBtn"),
+    yocoReady ? pkg.yoco : "",
+    valid && yocoReady
+  );
+
+  /* WhatsApp */
+  const whatsappReady =
+    CONFIG.whatsapp.trim() !== "" &&
+    !CONFIG.whatsapp.includes("X");
+
+  const whatsappUrl = whatsappReady
+    ? "https://wa.me/" +
+      CONFIG.whatsapp +
+      "?text=" +
+      encodeURIComponent(summary())
+    : "";
+
+  setButton(
+    $("waBtn"),
+    whatsappUrl,
+    valid && whatsappReady
+  );
+
+}
+
+
+/* =========================================
+   EVENT LISTENERS
+========================================= */
+
+$("orderForm").addEventListener("input", refresh);
+
+$("orderForm").addEventListener("change", refresh);
+
+$("orderForm").addEventListener("submit", event => {
+  event.preventDefault();
+});
+
+
+/* =========================================
+   COPY ORDER
+========================================= */
+
+$("copyBtn").addEventListener("click", async () => {
+
+  const button = $("copyBtn");
+
+  try {
+
+    await navigator.clipboard.writeText(summary());
+
+    button.textContent = "Copied successfully";
+
+  } catch (error) {
+
+    button.textContent = "Copy failed";
+
+  }
+
+  setTimeout(() => {
+    button.textContent = "Copy order details";
+  }, 2000);
+
+});
+
+
+/* =========================================
+   INITIALISE
+========================================= */
+
+refresh();
+
+</script>
+</body>
+</html>
